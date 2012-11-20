@@ -1,0 +1,17 @@
+@charset "utf-8";
+.ui-seat-area { position: relative; z-index: 50; padding: 20px 50px 200px 50px;font-family:Arial, Helvetica, sans-serif;font-size:12px;margin-left:100px}
+.ui-seat-area img{margin:0px;padding:0px}
+.ui-seat{position: absolute; width: 20px;height: 20px;margin: 5px;}
+.ui-s-hover{cursor:pointer}
+/* for cinema */
+.available{background: url("../images/seat_list.png") no-repeat;background-position: 0px 1px;cursor:pointer}
+.selected{background: url("../images/seat_list.png") no-repeat;background-position: 0px -25px;cursor:pointer}
+.sold{background: url("../images/seat_list.png") no-repeat;background-position: 0px -55px;}
+.lock{background: url("../images/seat_list.png") no-repeat;background-position: 0px -82px;}
+.tao{background: url("../images/seat_list.png") no-repeat;background-position: 0px -108px;cursor:pointer} /**/
+	
+.show .available_e{background: url("../images/seat_list_show.png") no-repeat;background-position: 0px -2px;cursor:pointer}
+.show .selected_e{background: url("../images/seat_list_show.png") no-repeat;background-position: 0px -47px;}
+.show .sold_e{background: url("../images/seat_list_show.png") no-repeat;background-position: 0px -25px;}
+.show .lock_e{background: url("../images/seat_list_show.png") no-repeat;background-position: 0px -69px;}
+.show .tao_e{background: url("../images/seat_list_show.png") no-repeat;background-position: 0px -91px;cursor:pointer}

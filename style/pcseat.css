@@ -1,0 +1,140 @@
+/*
+* 
+* sept 2012
+* by scott
+* jonahshun@gmail.com 
+* 
+*/
+/* PC宽屏样式*/
+.intrc-p{line-height:18px;padding-top:5px}
+.container{width:100%;}
+.container .innerbox{width:959px;margin-left:auto;margin-right:auto;}
+.col-2{float:left;}
+.seat_row{width:681px;}
+.seat_column{width:30px;float:left;margin-top:65px}
+.seat_row ul{margin-left: 98px;padding-left:20px;}
+.seat_column ul{ width:100%;}
+.seat_row ul li{ text-align:center;display:inline-block;width:24px;height:28px;border-left: 1px solid #ccc;float:left;margin-left:5px;line-height:28px;}
+.seat_column ul li{ text-align:center;display:inline-block;width:24px;height:27px;padding-top:2px;line-height:28px;border-top: 1px solid #ccc;float:left;}
+.seat_column ul li.space_a{height:26px;}
+.seat_wrap{border:1px solid #ccc;width:650px;float:left;}
+.clearfix:after{display:block;height:0;clear:both;visibility:hidden;content:".";}
+.ui-seat-area { margin-left:90px;margin-top:50px;position: relative; z-index: 50; padding: 0px 50px 50px 20px;font-family:Arial, Helvetica, sans-serif;font-size:12px}
+.ui-seat{position: absolute; width: 25px;height: 25px;margin: 5px;}
+
+.col-1{float:right;width:276px;margin-top:28px}
+.col-1 .item_header{display:none}
+.col-1 .note_panel{width:99%;background-color:#f3f1f0;float:left;}
+.col-1 .note_panel ul{width:100%;}
+.col-1 .note_panel ul li{line-height:30px;height:30px;width:100%}
+.col-1 .note_panel ul li label{width:100%;height:25px;margin-top:5px;padding-left:30px;}
+.notcursor{cursor:normal}
+
+.col-1 .resule_panel{width:99%;background-color:#e7e6e5;float:left;}
+.col-1 .resule_panel ul{width:100%;}
+.col-1 .resule_panel ul li{line-height:30px;height:30px;width:100%}
+ul.selected_panel li{padding-left:3px;display:inline-block;}
+.selected_panel .info{width:80%;float:left;}
+.selected_panel .s_delete{float:right;padding-right:6px;display: inline-block;cursor: pointer;font-size:14px;}
+.note_panel label{display:block;line-height:30px;vertical-align: middle;padding-left:4px}
+.note_panel label img{vertical-align: middle}
+
+.col-3{float:left;width: 100%;}
+.col-3 .desc{margin-top:10px;background-color: #CCC; color: #723600;font-size: 18px;line-height: 36px;width:100%;padding: 5px;}
+.col-3 .code-desc{float:left;font-size:13px;line-height:24px;width:100%;padding: 5px;}
+.col-3 .code-desc .item{width:100%;float:left}
+.col-3 .code-desc .item p{line-height: 18px;padding-top:5px;padding-bottom:10px}
+.col-3 .code-desc .sunburst{width:99%;background-color:#CCC;color: #582A00;display: inline-block; font-family:Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px;}
+
+.footer{width:959px;margin-left:auto;margin-right:auto;padding-top:20px;line-height:36px;border-top:1px solid #ccc}
+
+/* iPad及以下，所有小于（不等于）960宽度的平板电脑*/
+@media only screen and (max-width: 959px) {}
+/* 仅iPad竖版，所有小于（不等于）960宽度的平板电脑的竖版*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+/* iPhone及以下*/
+@media only screen and (max-width: 767px) {}
+/* 仅iPhone横版，包括某些平板电脑的竖版*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container{width:100%;}
+.container .innerbox{width:100%;margin-left:auto;margin-right:auto;}
+.col-2{float:left;width:100%}
+.seat_row{width:681px;display:none}
+.seat_column{width:30px;float:left;margin-top:65px;display: none}
+.seat_row ul{margin-left: 98px;padding-left:20px;}
+.seat_column ul{ width:100%;}
+.seat_row ul li{ text-align:center;display:inline-block;width:24px;height:28px;border-left: 1px solid #ccc;float:left;margin-left:5px;line-height:28px;}
+.seat_column ul li{ text-align:center;display:inline-block;width:24px;height:27px;padding-top:2px;line-height:28px;border-top: 1px solid #ccc;float:left;}
+.seat_column ul li.space_a{height:26px;}
+.seat_wrap{border:0;width:100%;float:left;}
+.clearfix:after{display:block;height:0;clear:both;visibility:hidden;content:".";}
+.ui-seat-area { margin-left:0;margin-top:0;position: relative; z-index: 50; padding: 0 0 50px 0;font-family:Arial, Helvetica, sans-serif;font-size:12px}
+.ui-seat{position: absolute; width: 25px;height: 25px;margin: 5px;}
+
+.col-1{float:left;width:100%;margin-top:0}
+.col-1 .item_header{width:100%;background-color:#cfcfcf}
+.col-1 .note_panel{width:100%;background-color:#f3f1f0;float:left;}
+.col-1 .note_panel ul{width:100%;}
+.col-1 .note_panel ul li{line-height:30px;height:30px;width:15%;float:left}
+.col-1 .note_panel ul li label{width:25px;height:25px;margin-top:5px;padding-left:30px;overflow:hidden}
+
+.col-1 .resule_panel{width:100%;background-color:#e7e6e5;float:left;}
+.col-1 .resule_panel ul{width:100%;}
+.col-1 .resule_panel ul li{line-height:30px;height:30px;width:12%;float:left}
+ul.selected_panel li{padding-left:3px;display:inline-block;width:12%;background-color:#ddd;margin-right:3px;color:#000}
+.selected_panel .info{width:80%;float:left;}
+.selected_panel .s_delete{float:right;padding-right:6px;display: inline-block;cursor: pointer;font-size:14px;}
+.note_panel label{display:block;line-height:30px;vertical-align: middle;padding-left:6px}
+.note_panel label img{vertical-align: middle}
+
+.col-3{float:left;width: 100%;}
+.col-3 .desc{margin-top:10px;background-color: #CCC; color: #723600;font-size: 18px;line-height: 36px;width:100%;padding: 5px;}
+.col-3 .code-desc{float:left;font-size:13px;line-height:24px;width:100%;padding: 5px;}
+.col-3 .code-desc .item{width:100%;float:left}
+.col-3 .code-desc .item p{line-height: 18px;padding-top:5px;padding-bottom:10px}
+.col-3 .code-desc .sunburst{width:99%;background-color:#CCC;color: #582A00;display: inline-block; font-family:Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px;}
+
+.footer{width:100%;margin-left:auto;margin-right:auto;padding-top:20px;line-height:36px;border-top:1px solid #ccc}
+}
+/* 仅iphone4 竖版*/
+@media only screen and (max-width: 479px) {
+.container{width:100%;}
+.container .innerbox{width:100%;margin-left:auto;margin-right:auto;}
+.col-2{float:left;width:100%}
+.seat_row{width:681px;display:none}
+.seat_column{width:30px;float:left;margin-top:65px;display: none}
+.seat_row ul{margin-left: 98px;padding-left:20px;}
+.seat_column ul{ width:100%;}
+.seat_row ul li{ text-align:center;display:inline-block;width:24px;height:28px;border-left: 1px solid #ccc;float:left;margin-left:5px;line-height:28px;}
+.seat_column ul li{ text-align:center;display:inline-block;width:24px;height:27px;padding-top:2px;line-height:28px;border-top: 1px solid #ccc;float:left;}
+.seat_column ul li.space_a{height:26px;}
+.seat_wrap{border:0;width:100%;float:left;overflow-x: scroll;overflow-y:hidden}
+.clearfix:after{display:block;height:0;clear:both;visibility:hidden;content:".";}
+.ui-seat-area { margin-left:0;margin-top:0;position: relative; z-index: 50; padding: 0;font-family:Arial, Helvetica, sans-serif;font-size:12px}
+.ui-seat{position: absolute; width: 25px;height: 25px;margin: 5px;}
+
+.col-1{float:left;width:100%;margin-top:0}
+.col-1 .item_header{width:100%;background-color:#cfcfcf}
+.col-1 .note_panel{width:100%;background-color:#f3f1f0;float:left;}
+.col-1 .note_panel ul{width:100%;}
+.col-1 .note_panel ul li{line-height:30px;height:30px;width:15%;float:left;}
+.col-1 .note_panel ul li label{width:25px;height:25px;margin-top:5px;padding-left:30px;overflow:hidden}
+
+.col-1 .resule_panel{width:100%;background-color:#e7e6e5;float:left;}
+.col-1 .resule_panel ul{width:100%;}
+.col-1 .resule_panel ul li{line-height:30px;height:30px;width:15%;float:left}
+ul.selected_panel li{padding-left:2px;display:inline-block;width:15%;background-color:#ddd;margin-right:2px;color:#000}
+.selected_panel .info{width:80%;float:left;}
+.selected_panel .s_delete{float:right;padding-right:6px;display: inline-block;cursor: pointer;font-size:14px;}
+.note_panel label{display:block;line-height:30px;vertical-align: middle;padding-left:6px}
+.note_panel label img{vertical-align: middle}
+
+.col-3{float:left;width: 100%;}
+.col-3 .desc{margin-top:10px;background-color: #CCC; color: #723600;font-size: 18px;line-height: 36px;width:100%;padding: 5px;}
+.col-3 .code-desc{float:left;font-size:13px;line-height:24px;width:100%;padding: 5px;}
+.col-3 .code-desc .item{width:100%;float:left}
+.col-3 .code-desc .item p{line-height: 18px;padding-top:5px;padding-bottom:10px}
+.col-3 .code-desc .sunburst{width:99%;background-color:#CCC;color: #582A00;display: inline-block; font-family:Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px;}
+
+.footer{width:100%;margin-left:auto;margin-right:auto;padding-top:20px;line-height:36px;border-top:1px solid #ccc}
+}

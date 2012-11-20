@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* YUI 3.5.0 (build 5089) CSS RESET */
+html{color:#000;background:#fff;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
+
+body,button,input,select,textarea { font-size: 12px; line-height: 1; font-family: Arial, Helvetica, sans-serif}
+html { -webkit-text-size-adjust: none;}
+.clear:after { content: '\20'; display: block; height: 0; clear: both;}
+.clear { *zoom: 1;}
+.fl { float: left;}
+.fr { float: right;}
+.tl { text-align: left;}
+.tc { text-align: center;}
+.tr { text-align: right;}
+a { text-decoration: none;}
+
+/* result panel*/
+.s-info-b { position: fixed; width: 100%; bottom: 0; z-index: 100;}
+.s-info-b-nav { border-bottom: 1px solid #858585;}
+.s-info-b-nav ul { width: 242px; height: 21px; margin: 0 auto;}
+.s-info-b-nav li { line-height: 20px; text-align: center; font-size: 15px; border: 1px solid #151515; border-bottom: none; float: left; font-weight: bold;}
+.s-info-b-nav li a { display: block; height: 20px; text-shadow: 0 -1px 0 #000;}
+.s-info-b-nav li a span { display: inline-block; width: 16px; height: 16px; text-align: center; line-height: 16px; border: 1px solid #111; border-radius: 8px; color: #fff; background: #272727;}
+
+.s-info-b-nav .nav-1-on,.s-info-b-nav .nav-2-on { width: 120px; height: 21px; position: relative; z-index: 10; background: -webkit-gradient(linear, 0 0, 0 100%, from(#5d5d5d), to(#333),color-stop(0.5, #454545), color-stop(0.5, #333)); background: -moz-linear-gradient(top, #5d5d5d, #454545 50%, #333 50%, #333); background: -o-linear-gradient(top, #5d5d5d, #454545 50%, #333 50%, #333); -webkit-box-shadow: 0 1px 0 #9e9e9e inset; -moz-box-shadow: 0 1px 0 #9e9e9e inset; box-shadow: 0 1px 0 #9e9e9e inset;}
+.s-info-b-nav .nav-1-on a,.s-info-b-nav .nav-2-on a { color: #b7b7b7;}
+.s-info-b-nav .nav-1-off,.s-info-b-nav .nav-2-off { width: 119px; height: 20px; background: -webkit-gradient(linear, 0 0, 0 100%, from(#454545), to(#010101)); background: -moz-linear-gradient(top, #454545, #010101); background: -o-linear-gradient(top, #454545, #010101);}
+.s-info-b-nav .nav-1-off a,.s-info-b-nav .nav-2-off a { color: #6b6b6b;}
+
+.s-info-b-nav .nav-1-on { border-right: none; border-top-left-radius: 5px;}
+.s-info-b-nav .nav-2-on { border-left: none; border-top-right-radius: 5px;}
+.s-info-b-nav .nav-1-off { border-top-left-radius: 5px;}
+.s-info-b-nav .nav-2-off { border-top-right-radius: 5px;}
+
+.s-info-b h2 { height: 20px; border-top: 1px solid #000; line-height: 20px; color: #888; font-size: 14px; padding-left: 10px; background: -webkit-gradient(linear, 0 0, 0 100%, from(#262626), to(#000)); background: -moz-linear-gradient(top, #262626, #000); background: -o-linear-gradient(top, #262626, #000); box-shadow: 0 1px 0 #525252 inset;}
+.s-info-b-list { background-color: #333; padding: 8px; margin-bottom: -8px;}
+.s-info-b-list li { height: 22px; border: 1px solid #0f0f0f; border-radius: 5px; margin-bottom: 8px; background-color: #303030; -webkit-box-shadow: 0 0 2px #999, 0 1px 1px #111 inset; -moz-box-shadow: 0 0 2px #999, 0 1px 1px #111 inset; box-shadow: 0 0 2px #999, 0 1px 1px #111 inset;}
+.s-info-b-list li div { float: left; height: 22px; line-height: 22px; font-size: 14px;}
+.s-info-b-list li div.price { width: 30%; color: #fff; font-weight: bold;}
+.s-info-b-list li div.price span { display: block; float: left; width: 12px; height: 12px; margin: 5px 5px 0 10px;}
+.s-info-b-list li div.seat { width: 30%; color: #a2a2a2; font-weight: bold;}
+.s-info-b-list li div.sort { width: 25%; color: #a2a2a2; font-weight: bold;}
+.s-info-b-list li div.del { width: 14%; float: right; border: 1px solid #0f0f0f; position: relative; z-index: 200; margin: -1px -1px 0 0; border-radius: 5px; background: -webkit-gradient(linear, 0 0, 0 100%, from(#797979), to(#383838),color-stop(0.5, #404040), color-stop(0.5, #212121)); background: -moz-linear-gradient(top, #797979, #404040 50%, #212121 50%, #383838); background: -o-linear-gradient(top, #797979, #404040 50%, #212121 50%, #383838);}
+.s-info-b-list li div.del a { display: block; height: 22px; text-align: center;}
+
+.s-info-b-guide { background-color: #333; padding: 8px;}
+.s-info-b-guide .price { overflow: hidden; zoom: 1;}
+.s-info-b-guide .price li { color: #fff; font-weight: bold; font-size: 14px; float: left; height: 22px; line-height: 22px; margin-right: 10px;}
+.s-info-b-guide .price span { display: block; float: left; width: 12px; height: 12px; margin: 5px 5px 0 0;}
+.s-info-b-guide .sort { height: 22px; border: 1px solid #0f0f0f; border-radius: 5px; margin-top: 8px; background-color: #303030; -webkit-box-shadow: 0 0 2px #999, 0 1px 1px #111 inset; -moz-box-shadow: 0 0 2px #999, 0 1px 1px #111 inset; box-shadow: 0 0 2px #999, 0 1px 1px #111 inset;}
+.s-info-b-guide .sort li { float: left; margin-right: 10px;}
+.s-info-b-guide .sort li img { display: block; width: 14px; height: 13px; float: left; margin: 5px 5px 0 5px;}
+.s-info-b-guide .sort li span { display: block; height: 22px; line-height: 22px; float: left; color: #fff; font-size: 14px;}
