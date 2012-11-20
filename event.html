@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<title>Event Seat </title>
+		<link rel="stylesheet"  href="style/main.css" />
+		<link rel="stylesheet"  href="style/seat.css" />
+		<script src="../js/jquery.js"></script>
+	</head>
+	<body>
+
+			<div class="content show" id="main" >
+				 
+			</div>
+				<div class="s-info-b" style="position: fixed; bottom: 0px; width: 100%">
+            <div class="s-info-b-nav">
+                <ul>
+                    <li class="nav-1-on" id="tab1"><a style="height:50px" href="javascript:void(null)">
+                        Your Seat<span id="count">0</span></a></li>
+                    <li class="nav-1-off" id="tab2"><a href="javascript:void(null)">
+                        Price List</a></li>
+                </ul>
+            </div>
+            <div class="s-info-b-guide" id="pricearea" style="display: none; ">
+                <ul class="price"><li><span style="background-color: #F91616;"></span>980.00</li>
+				<li><span style="background-color: #EF8686;"></span>780.00</li>
+				<li><span style="background-color: #EEB31B;"></span>680.00</li>
+				<li><span style="background-color: #8ac4e3;"></span>480.00</li>
+				<li><span style="background-color: #bf6aa2;"></span>380.00</li>
+				<li><span style="background-color: #355fac;"></span>280.00</li></ul>
+                <ul class="sort">
+                    <li>
+                        <img src="images/event/icon-seat-1.png" width="14" height="13"><span>Seaon</span></li>
+                    <li>
+                        <img src="images/event/icon-seat-2.png" width="14" height="13"><span>Lock</span></li>
+                    <li>
+                        <img src="images/event/icon-seat-3.png" width="14" height="13"><span>Sold</span></li>
+                    <li>
+                        <img src="images/event/icon-seat-4.png" width="14" height="13"><span>Selected</span></li>
+                </ul>
+            </div>
+            <div id="wantbuy" style="display: none; "><h2>Area 12</h2><div class="s-info-b-list">
+			<ul>
+			 </ul></div></div>
+        </div>
+
+		<script src="jquery.seat.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var venueid=41468909,
+				pricecolors=['#EF8686','#EEB31B','#8AC4E3','#BF6AA2','#355FAC'];
+				$.getJSON('data/data.json',{},function(data){
+					var ss=$("#main").seat({data:data,mapurl:"http://www.hml5.com",
+					tpl:'<div class="tpl" style="background-color: black; width: 20px; height: 20px; "></div>',
+					title:false,
+					colorprice:pricecolors,
+					seatcls:{'selected':'selected_e','available':'available_e','lock':'lock_e','sold':'sold_e','tao':'tao_e'},
+					result:function(data,current){
+						$("#count").html(data.length);
+						$("#wantbuy").find('ul:eq(0)').empty();
+						$.each(data,function(index){
+							var da=this.split(','),pcolor=pricecolors[da[1]],
+								ist=da[da.length-1]=='istao'?'*':'',
+								desc=da[da.length-1]=='istao'?'Season':'Normal',
+								dom='<li id="li_'+da[0]+"_"+da[6]+"_"+venueid+'"><div class="price">'
+								+'<span style="background-color: '+pcolor+';">'+ist+'</span>'+da[5]+'</div><div class="seat">'
+								+'<span info="NO '+da[3]+', Row '+da[2]+'"></span>NO '+da[3]+', Row '+da[2]+'</div>'
+								+'<div class="sort"> '+desc+'</div>'
+								+'<div class="del"><a href="javascript:void(null)" class="delete_seat" data="'+da[0]+"_"+da[6]+"_"+venueid+'" >'
+								+'<img src="images/icon-del.png" width="21" height="21"></a></div> </li>';
+							$("#wantbuy").find('ul:eq(0)').append(dom);
+						})
+						//var ss='re';
+						$(".delete_seat").click(function(e){
+							e.preventDefault();
+							e.stopPropagation();
+							var id=$(this).attr('data');
+							$("#s_"+id).click();
+							
+						});
+					}});
+					
+				});
+				$("#tab2").click(function(){
+					$("#tab1").attr('class','nav-2-off');
+					$("#tab2").attr('class','nav-2-on');
+					$("#wantbuy").hide();
+					$("#pricearea").show();
+				})
+				$("#tab1").click(function(){
+					$("#tab1").attr('class','nav-1-on');
+					$("#tab2").attr('class','nav-2-off');
+					if($("#wantbuy").is(":visible")){
+						$("#pricearea,#wantbuy").hide();
+					}else{
+						$("#pricearea").hide();
+						$("#wantbuy").show();
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
