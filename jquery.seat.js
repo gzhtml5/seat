@@ -3,7 +3,6 @@
 * sept 2012
 * by scott
 * jonahshun@gmail.com 
-*
 * */
 ;(function($){
 	$.fn.seat=function(opts){
@@ -59,43 +58,6 @@
 				scrollTop : maxTop/2,
 				scrollLeft : maxLeft/2
 			}, 500);
-
-			/* add scroll event to the frame */
-			var objDom_parent=objDom.parent(),startx=0,starty=0,startscroll=0,winscrolly=0;
-			if(objDom_parent.length>0){
-				 var divWidth = objDom_parent.width();
-				 var ulPadding = 15;
-				 var lastLi=objDom;
-				 var flag=0;
-				objDom_parent.bind(START_EV,function(e){
-					flag=1;
-					var point_e=hasTouch? (e.originalEvent.touches[0]|| e.originalEvent.changedTouches[0]): e;
-					startx=parseInt(point_e.pageX);
-					starty=parseInt(point_e.pageY);
-					startscroll=parseInt($(this).scrollLeft());
-					winscrolly=parseInt($("body").scrollTop()); /* if the seat panel is full screen, we need to escape and scroll the vertical window bar*/
-				});
-				objDom_parent.bind(END_EV,function(e){flag=0;});
-				objDom_parent.bind(CANCEL_EV,function(e){flag=0;});
-				objDom_parent.bind('mouseout',function(e){flag=0;});
-				objDom_parent.bind(MOVE_EV,function(e){
-					e.preventDefault();
-					e.stopPropagation();
-					 if(flag==0) return false;
-					  
-					  var div=$(this);
-					  var point_e=hasTouch? (e.originalEvent.touches[0]|| e.originalEvent.changedTouches[0]): e;
-					  var verticalV=parseInt(Math.abs(point_e.pageY-starty)),horizontalV=parseInt(Math.abs(point_e.pageX-startx));
-				      if(horizontalV>=verticalV){ /* 水平移动距离大于垂直的移动距离   horizontal大左右移动座位， vertical大滚动屏幕 */
-					      var left=startscroll-(point_e.pageX-startx);
-					      //div.animate({scrollLeft:left},50);
-					      div.scrollLeft(parseInt(left));
-				      }else{
-					      var top=winscrolly-(point_e.pageY-starty);
-					      $("body").scrollTop(parseInt(top));
-				     }
-			    });
-			}
 			
 		};
 		var reload=function(objDom,url){
